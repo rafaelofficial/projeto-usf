@@ -1,0 +1,40 @@
+  <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+          <a routerLink="#" class="nav-link" routerLinkActive="active">Login</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+    <br>
+    <h2 style="text-align: center;">{{title}}</h2>
+    <hr>  
+    <div class="card">
+      <div class="card-body">
+        <h3>Cadastar Usuário</h3>
+        <div style="width: 400px;">
+          <form>
+            <div class="form-group">
+              <label for="name">Nome completo:</label>
+              <input type="text" class="form-control" id="name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="name">E-mail:</label>
+              <input type="text" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+              <label for="name">Senha:</label>
+              <input type="text" class="form-control" id="senha" name="senha">
+            </div>
+            <div class="form-group">
+              <label for="name">Senha novamente:</label>
+              <input type="text" class="form-control" id="senha2" name="senha2">
+            </div>
+            <button type="submit" class="btn btn-success mt-3">Cadastar Usuário</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
