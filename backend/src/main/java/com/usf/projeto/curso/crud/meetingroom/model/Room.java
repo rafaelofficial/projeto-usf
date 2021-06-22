@@ -1,14 +1,13 @@
 package com.usf.projeto.curso.crud.meetingroom.model;
 
-import lombok.Builder;
-import lombok.Data;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Entity
 @Table(name="meetingroom")
@@ -80,6 +79,6 @@ public class Room {
 
     @Override
     public String toString() {
-        return "Room [id="+id+",name="+ name+ ",startHour="+ startHour+ ",endHour"+ endHour+" ]";
+        return "Room [id=" + id + ",name=" + name + ",date=" + date + ",startHour=" + startHour + ",endHour" + endHour + "]";
     }
 }

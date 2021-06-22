@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -51,12 +52,24 @@ public class RoomController {
     public ResponseEntity<Room> updateRoom(@PathVariable (value = "id") Long roomId,
                                            @Valid @RequestBody Room roomDetails) throws ResourceNotFoundException {
 
+
+
         Room room = roomRepository.findById(roomId)
                 .orElseThrow(() -> new ResourceNotFoundException("Room not found for this id::"+ roomId));
+
         room.setName(roomDetails.getName());
-        room.setDate(roomDetails.getDate());
-        room.setStartHour(roomDetails.getStartHour());
-        room.setEndHour(roomDetails.getEndHour());
+
+        SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy");
+        String dateFormat = formatDate.format(roomDetails.getDate());
+        room.setDate(dateFormat);
+
+        SimpleDateFormat formatTimeStart = new SimpleDateFormat("HH:mm");
+        String startHourFormat = formatTimeStart.format(roomDetails.getStartHour());
+        room.setStartHour(startHourFormat);
+
+        SimpleDateFormat formatTimeEnd = new SimpleDateFormat("HH:mm");
+        String endHourFormat = formatTimeEnd.format(roomDetails.getEndHour());
+        room.setEndHour(endHourFormat);
 
         final Room updateRoom = roomRepository.save(room);
         return ResponseEntity.ok(updateRoom);

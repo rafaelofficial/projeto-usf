@@ -1,5 +1,6 @@
+<div class="container-lg">
 <h3>Editar Salas</h3>
-<div [hidden]="submitted" style="width: 400px;">
+<div class="input-group mb-3" [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Nome:</label>
@@ -7,20 +8,21 @@
     </div>
 
     <div class="form-group">
-      <label for="name">Data</label>
-      <input type="text" class="form-control" id="date" required [(ngModel)]="room.date" name="date">
+      <label class="form-label" for="{date">Data</label>
+      <input type="date" class="form-control" id="date" required [(ngModel)]="room.date" name="date">
     </div>
 
     <div class="form-group">
-      <label for="name">Horário entrada</label>
-      <input type="text" class="form-control" id="startHour" required [(ngModel)]="room.startHour" name="startHour">
+      <label class="form-label" for="time">Horário entrada</label>
+      <input type="time" class="form-control" id="startHour" required [(ngModel)]="room.startHour" name="startHour">
     </div>
 
     <div class="form-group">
-      <label for="name">Horário saída</label>
-      <input type="text" class="form-control" id="endHour" required [(ngModel)]="room.endHour" name="endHour">
+      <label class="form-label" for="time">Horário saída</label>
+      <input type="time" class="form-control" id="endHour" required [(ngModel)]="room.endHour" name="endHour">
     </div>
-
-    <button type="submit" class="btn btn-success">Enviar</button>
+    <br>
+    <button type="submit" class="btn btn-lg btn-success col-12">Enviar</button>
   </form>
+</div>
 </div>

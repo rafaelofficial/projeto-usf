@@ -1,4 +1,4 @@
-<h2>Digital Innovation: Desenvolvendo um sistema de gerenciamento de salas de reunião  em API REST com Spring Boot</h2>
+<h2>Desenvolvendo um sistema de gerenciamento de salas de reunião  em API REST com Spring Boot</h2>
 
 Neste projeto iremos desenvolver uma API com Spring Boot para gerenciar nossas salas de reunião, utilizaremos o Spring Data para persistência de dados e o banco de dados MySQL. E o Front End que irá consumir essa API será uma SPA escrita em Angular.
 
