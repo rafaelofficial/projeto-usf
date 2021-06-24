@@ -11,7 +11,7 @@ Serão desenvolvidos os seguintes tópicos:
 
 Para executar o projeto no terminal, digite o seguinte comando:
 
-<h3>Angular - Servidor de desenvolvimento</h3> 
+<h3>Angular - Servidor de desenvolvimento:</h3> 
  
 
 Execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
